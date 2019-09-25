@@ -17,6 +17,7 @@
   }
 
   p {
+    max-width: 1500px;
     margin-top: 20px;
     font-family: $font-family-open-sans;
     font-size: 2em;
@@ -25,6 +26,7 @@
   }
 
   &__wrapper {
+    max-width: 1500px;
     margin-top: 20px;
     @include flex();
     flex-wrap: wrap;
