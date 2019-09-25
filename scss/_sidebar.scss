@@ -1,0 +1,100 @@
+.sidebar {
+  height: 100vh;
+  background-color: $color-sidebar-background;
+  @include flex();
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 375px;
+
+  &__user {
+    margin-top: 50px;
+    padding: 0 40px 0 40px;
+    @include flex();
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__wrapper {
+    @include flex();
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  img {
+    height: auto;
+    width: 100px;
+  }
+
+  &__name {
+    font-size: 2.4em;
+    color: $color-white;
+    margin-bottom: 6px;
+    font-family: $font-family-open-sans;
+  }
+
+  &__job {
+    font-size: 1.4em;
+    color: $color-sidebar-text;
+    font-family: $font-family-open-sans;
+  }
+
+  &__nav {
+    width: 100%;
+    margin-top: 20px;
+    flex-grow: 1;
+  }
+
+  &__element {
+    height: 60px;
+    padding: 0 40px 0 40px;
+    @include flex();
+    justify-content: space-between;
+    font-size: 2em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color-sidebar-background, 3);
+
+      a {
+        color: $color-sidebar-highlight;
+      }
+
+      i {
+        color: $color-sidebar-highlight;
+      }
+    }
+
+    a {
+      font-family: $font-family-open-sans;
+      color: $color-sidebar-text;
+      text-decoration: none;
+    }
+
+    i {
+      color: $color-sidebar-icon;
+      font-size: 2.6rem;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    margin-bottom: 10px;
+    @include flex();
+    font-size: 3em;
+    color: $color-sidebar-text;
+
+    i {
+      cursor: pointer;
+      color: $color-sidebar-icon;
+
+      &:hover {
+        color: $color-sidebar-text;
+      }
+    }
+
+    i:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+}

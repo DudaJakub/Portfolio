@@ -1,0 +1,27 @@
+.about {
+  width: 100%;
+  margin: auto;
+  padding: 80px 60px 80px 60px;
+  @include flex();
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $color-whitesmoke;
+
+  h2 {
+    font-size: 3.6em;
+    font-family: $font-family-open-sans;
+    font-weight: normal;
+    color: $color-sidebar-icon;
+  }
+
+  p {
+    max-width: 1500px;
+    margin-top: 30px;
+    padding: 0px 10px 0px 10px;
+    font-size: 2em;
+    font-family: $font-family-open-sans;
+    color: $color-sidebar-text;
+    text-align: justify;
+  }
+}
+
