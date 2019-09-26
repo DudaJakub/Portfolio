@@ -8,7 +8,7 @@
   background-color: $color-mainbar-background-dark;
 
   h2 {
-    margin-top: 40px;
+    margin-top: 30px;
     font-family: $font-family-open-sans;
     font-size: 3.6em;
     font-weight: normal;
@@ -18,7 +18,7 @@
 
   p {
     max-width: 1500px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: $font-family-open-sans;
     font-size: 2em;
     color: $color-mainbar-text-light;
@@ -33,6 +33,12 @@
   }
 
   img {
+    margin-bottom: 10px;
+    width: 100px;
     height: 100px;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
   }
 }
