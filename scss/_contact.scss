@@ -1,5 +1,5 @@
 .contact  {
-  padding: 80px 60px 80px 60px;
+  padding: 80px 20px 80px 20px;
   @include flex();
   flex-direction: column;
   font-family: $font-family-open-sans;
@@ -20,10 +20,10 @@
     text-align: center;
   }
 
-  span {
+  i {
     max-width: 1500px;
     margin-top: 20px;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: bold;
     color: $color-mainbar-text-light;
     text-align: center;

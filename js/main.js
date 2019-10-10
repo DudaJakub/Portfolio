@@ -41,4 +41,9 @@ $(function () {
         }
     })
 
+    $('.projects__image').each(function () {
+        console.log($(this).data('url'));
+        $(this).css('backgroundImage', `url(${$(this).data('url')}`);
+    })
+
 });
