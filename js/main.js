@@ -39,7 +39,7 @@ $(function () {
             $('.sidebar').toggle(400, 'swing');
             $('.hamburger').toggleClass('open');
         }
-    })
+    });
 
     $('.projects__image').each(function () {
         console.log($(this).data('url'));
