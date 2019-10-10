@@ -1,19 +1,36 @@
 .sidebar {
+  position: absolute;
   height: 100vh;
   min-height: 600px;
   background-color: $color-sidebar-background;
+  align-items: flex-start;
+  width: 100%;
   @include flex();
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  min-width: 375px;
+
+  @media (min-width: 1024px) {
+    position: relative;
+    width: 275px;
+    min-width: 275px;
+  }
+
+  @media (min-width: 1500px) {
+    width: 335px;
+    min-width: 335px;
+  }
 
   &__user {
-    margin-top: 50px;
-    padding: 0 40px 0 40px;
-    @include flex();
-    justify-content: space-between;
-    width: 100%;
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+      margin-top: 50px;
+      padding: 0 20px 0 20px;
+      @include flex();
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -23,36 +40,53 @@
   }
 
   img {
-    height: auto;
-    width: 100px;
+    display: none;
+
+    @media(min-width: 1024px) {
+      display: block;
+      width: 80px;
+      height: auto;
+    }
+
+    @media (min-width: 1500px) {
+      width: 100px;
+    }
   }
 
   &__name {
-    font-size: 2.4em;
+    font-size: 2em;
     color: $color-white;
     margin-bottom: 6px;
     font-family: $font-family-open-sans;
   }
 
   &__job {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: $color-sidebar-text;
     font-family: $font-family-open-sans;
   }
 
   &__nav {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 60px;
     flex-grow: 1;
+    
+    @media (min-width: 1024px) {
+      margin-top: 20px;
+    }
   }
 
   &__element {
     height: 60px;
-    padding: 0 40px 0 40px;
+    padding: 0 20px 0 20px;
     @include flex();
-    justify-content: space-between;
+    justify-content: center;
     font-size: 2em;
     cursor: pointer;
+
+    @media (min-width: 1024px) {
+        justify-content: space-between;
+    }
 
     &:hover {
       background-color: darken($color-sidebar-background, 3);
@@ -67,6 +101,7 @@
     }
 
     a {
+      margin-left: 20px;
       font-family: $font-family-open-sans;
       color: $color-sidebar-text;
       text-decoration: none;
@@ -80,7 +115,7 @@
 
   &__footer {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 10vh;
     @include flex();
     font-size: 3em;
     color: $color-sidebar-text;
@@ -96,6 +131,10 @@
 
     i:not(:last-of-type) {
       margin-right: 10px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 10px;
     }
   }
 }

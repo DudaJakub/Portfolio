@@ -24,10 +24,6 @@ $(function () {
         $(this).toggleClass('active')
     });
 
-    $('.projects__links').mouseleave(function () {
-        $(this).removeClass('active')
-    });
-
     $('.sidebar__element').on('click', function (e) {
         e.preventDefault();
         const goTo = $(this).find('a').attr('href');

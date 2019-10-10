@@ -1,11 +1,15 @@
 .projects {
   width: 100%;
   margin: auto;
-  padding: 80px 60px 80px 60px;
+  padding: 80px 15px 80px 15px;
   @include flex();
   flex-direction: column;
   justify-content: flex-start;
   background-color: $color-mainbar-background-light;
+
+  @media (min-width: 1024px) {
+    padding: 80px 40px 80px 40px;
+  }
 
   h2 {
     font-family: $font-family-open-sans;
@@ -16,39 +20,65 @@
   }
 
   &__grid {
-    max-width: 1500px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    @media (min-width: 750px) {
+      max-width: 1500px;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @media (min-width: 1350px) {
+      max-width: 1500px;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
   }
 
   &__image {
+    margin-top: 20px;
     width: 100%;
     height: 250px;
     background-image: url("../images/unavailable.jpg");
     background-position: left;
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      margin-top: 0;
+    }
   }
 
   &__links {
     width: 100%;
     height: 100%;
+    @include flex();
+    justify-content: space-around;
+    cursor: pointer;
 
     a {
       display: none;
     }
 
     &:hover {
-      @include flex();
-      justify-content: space-around;
-      background-color: rgba(255,255,255, 0.85);
+        background-color: rgba(255, 255, 255, 0.85);
 
-      a {
-        display: block;
-        font-size: 4em;
-        color: $color-sidebar-highlight;
-      }
+        a {
+          display: block;
+          font-size: 4em;
+          color: $color-sidebar-highlight;
+        }
+    }
+  }
+
+  &__links.active {
+    background-color: rgba(255, 255, 255, 0.85);
+
+    a {
+      display: block;
+      font-size: 4em;
+      color: $color-sidebar-highlight;
     }
   }
 
