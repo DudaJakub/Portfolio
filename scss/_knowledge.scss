@@ -1,0 +1,53 @@
+.knowledge {
+  width: 100%;
+  margin: auto;
+  padding: 40px 15px 80px 15px;
+  @include flex();
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $color-mainbar-background-dark;
+
+  @media (min-width: 1024px) {
+    padding: 80px 40px 80px 40px;
+  }
+
+  h2 {
+    margin-top: 30px;
+    font-family: $font-family-open-sans;
+    font-size: 3.6em;
+    font-weight: normal;
+    color: $color-mainbar-text-dark;
+    text-align: center;
+  }
+
+  p {
+    max-width: 1400px;
+    margin-top: 10px;
+    font-family: $font-family-open-sans;
+    font-size: 2em;
+    color: $color-mainbar-text-light;
+    text-align: center;
+  }
+
+  &__wrapper {
+    max-width: 1400px;
+    margin-top: 20px;
+    @include flex();
+    flex-wrap: wrap;
+  }
+
+  img {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
+    @media (min-width: 750px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

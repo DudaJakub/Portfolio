@@ -5,11 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
     <title>jDev</title>
 </head>
 <body>
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <section class="sidebar">
     <div class="sidebar__user">
         <img src="images/photo.jpg" alt="Zdjęcie profilowe">
@@ -18,56 +31,151 @@
             <p class="sidebar__job">Frontend Developer</p>
         </div>
     </div>
+
     <nav class="sidebar__nav">
         <ul class="sidebar__list">
             <li class="sidebar__element">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                <a href="#" class="sidebar__link">Intro</a>
+                <a href="#intro" class="sidebar__link">Intro</a>
             </li>
             <li class="sidebar__element">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="#" class="sidebar__link">About me</a>
+                <a href="#about" class="sidebar__link">About me</a>
             </li>
             <li class="sidebar__element">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <a href="#" class="sidebar__link">What I know</a>
+                <a href="#knowledge" class="sidebar__link">What I know</a>
             </li>
             <li class="sidebar__element">
                 <i class="fa fa-th" aria-hidden="true"></i>
-                <a href="#" class="sidebar__link">Projects</a>
+                <a href="#projects" class="sidebar__link">Projects</a>
             </li>
             <li class="sidebar__element">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="#" class="sidebar__link">Contact</a>
+                <a href="#contact" class="sidebar__link">Contact</a>
             </li>
         </ul>
     </nav>
+
     <footer class="sidebar__footer">
-        <i class="fa fa-github" aria-hidden="true"></i>
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        <i class="fa fa-globe" aria-hidden="true"></i>
+        <a href="https://github.com/DudaJakub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <!--        <i class="fa fa-linkedin-square" aria-hidden="true"></i>-->
+        <!--        <i class="fa fa-globe" aria-hidden="true"></i>-->
     </footer>
 </section>
-<section class="mainbar">
-    <div class="intro">
+
+<section class="mainbar" id="#mainbar">
+    <div class="intro" id="intro">
         <h1>Hi! I'm Kuba and I'm frontend developer.</h1>
         <h2>Welcome on my portfolio page.</h2>
-        <h3>If you would like to download my CV, please click on the button below.</h3>
-        <button class="intro__button">Download CV</button>
+        <h3>If you would like to download my CV, please click on the button below</h3>
+        <a class="intro__button" href="cv/CV_DudaJ.pdf" download>Download CV</a>
     </div>
-    <div class="about">
+
+    <div class="about" id="about">
         <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur laudantium modi, nesciunt possimus praesentium quos repellat vitae? Cupiditate, ex, quisquam? Dolorum ea harum labore officia. Accusantium atque, aut beatae consequatur dicta doloremque doloribus esse eum fugit harum ipsa ipsam laboriosam maxime minus modi molestias, mollitia natus numquam quam quas reiciendis rem rerum sed similique sit tempora tempore temporibus, totam velit voluptatum! Animi cupiditate eligendi fuga molestiae quibusdam quo sapiente! Adipisci asperiores cumque eaque incidunt ipsam, labore modi nam officia officiis praesentium quas quo ratione repudiandae similique vitae? Amet culpa dolore, est in magnam maxime odio officiis provident sequi voluptas. Ab ad alias aliquam architecto asperiores consectetur dolores, et libero magnam nesciunt numquam officiis omnis perferendis quasi repudiandae tenetur veritatis. Ad alias consequatur consequuntur cumque, dolor explicabo ipsam, omnis pariatur perferendis placeat sed similique voluptas. Dicta dignissimos, doloribus fugit impedit, laboriosam laborum minus nam obcaecati omnis optio quam saepe tempore voluptate?</p>
+        <p>Hi! My name is Kuba and I have graduated from the faculty of Mechatronics, Automatics and Robotics at Warsaw University of
+            Technology. I used to programme in C++ and Matlab on classes. During my univeristy education, I independently started
+            learning programming in Unity engine using C# language. In that technology I managed to create
+            project to my graduation work and first VR commercial project. After I graduated, I decided to become a Web
+            Developer. Since that time, I have focused on my advancement towards becoming a front-end developer and I have tried to gain
+            basics knowledge of back-end for writing my own API</p>
+        <p>I am currently looking for an internship or first job as a front-end developer with ability to develop as a
+            full-stack developer</p>
     </div>
-    <div class="knowledge">
 
+    <div class="knowledge" id="knowledge">
+        <h2>What do I know?</h2>
+        <p>So far I have learned and used such tools as: HTML5, CSS3, SASS, Javascript (ES6), jQuery, AJAX, JSON-server, gulp,
+            Git, Chrom DevTools, Postman. I also know RWD methodology</p>
+        <div class="knowledge__wrapper">
+            <img src="images/icons/html.png" alt="HTML icon">
+            <img src="images/icons/css3.png" alt="CSS icon">
+            <img src="images/icons/js.jpg" alt="JavaScript icon">
+            <img src="images/icons/rwd.png" alt="RWD icon">
+            <img src="images/icons/git.png" alt="Git icon">
+            <img src="images/icons/gulp.png" alt="Gulp icon">
+            <img src="images/icons/jquery.png" alt="jQuery icon">
+            <img src="images/icons/ajax.png" alt="Ajax icon">
+            <img src="images/icons/pycharm.png" alt="PyCharm icon">
+            <img src="images/icons/postman.png" alt="Postman icon">
+            <img src="images/icons/chromedev.png" alt="ChromeDevTools icon">
+            <img src="images/icons/adobexd.png" alt="Adobe XD icon">
+        </div>
+        <h2>What am I still learninng?</h2>
+        <p>Further I am learning things like: React, webpack, MariaDB, MongoDB, Python with Django framework</p>
+        <div class="knowledge__wrapper">
+            <img src="images/icons/react.png" alt="React icon">
+            <img src="images/icons/python.png" alt="Python icon">
+            <img src="images/icons/django.png" alt="Django icon">
+            <img src="images/icons/webpack.png" alt="Webpack icon">
+            <img src="images/icons/mariadb.png" alt="MariaDB icon">
+            <img src="images/icons/mongodb.png" alt="MongoDB icon">
+        </div>
+        <h2>What do I want to learn?</h2>
+        <p>In the future I would like to learn vue.js and creating VR websites</p>
+        <div class="knowledge__wrapper">
+            <img src="images/icons/vue.png" alt="Vue.js icon">
+            <img src="images/icons/vr.png" alt="VR icon">
+        </div>
     </div>
-    <div class="projects">
 
+    <div class="projects" id="projects">
+        <h2>My projects</h2>
+        <div class="projects__grid">
+            <div class="projects__element">
+                <div class="projects__image" data-url="./images/projects/portfolio.png">
+                    <div class="projects__links">
+                        <a href="https://github.com/DudaJakub/Portfolio" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="https:/jdev.usermd.net"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="projects__tags">
+                    <span class="projects__tag">RWD</span>
+                    <span class="projects__tag">SASS</span>
+                    <span class="projects__tag">gulp</span>
+                    <span class="projects__tag">jQuery</span>
+                </div>
+            </div>
+            <div class="projects__element">
+                <div class="projects__image" data-url="./images/projects/lightInspector.png">
+                    <div class="projects__links">
+                        <a href="https://github.com/DudaJakub/LightInspector"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="projects__tags">
+                    <span class="projects__tag">Unity</span>
+                    <span class="projects__tag">C#</span>
+                    <span class="projects__tag">Arduino</span>
+                    <span class="projects__tag">Desktop App</span>
+                </div>
+            </div>
+            <div class="projects__element">
+                <div class="projects__image" data-url="../images/unavailable.jpg">
+                    <div class="projects__links">
+                        <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="projects__tags">
+                </div>
+            </div>
+        </div>
     </div>
-    <form action="" class="contact">
 
-    </form>
+    <div class="contact" id="contact">
+        <h2>Contact me</h2>
+        <p>If you would like to contact me please use email or phone number given below</p>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <p>dudajakub95@gmail.com</p>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <p>504 136 433</p>
+    </div>
+
+
+    <footer class="footer">
+        <p> &copy; jDev. All rights reserved</p>
+    </footer>
 </section>
 </body>
 </html>

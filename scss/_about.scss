@@ -1,27 +1,31 @@
 .about {
   width: 100%;
   margin: auto;
-  padding: 80px 60px 80px 60px;
+  padding: 80px 15px 80px 15px;
   @include flex();
   flex-direction: column;
   justify-content: flex-start;
-  background-color: $color-whitesmoke;
+  background-color: $color-mainbar-background-light;
+
+  @media (min-width: 1024px) {
+    padding: 80px 40px 80px 40px;
+  }
 
   h2 {
     font-size: 3.6em;
     font-family: $font-family-open-sans;
     font-weight: normal;
-    color: $color-sidebar-icon;
+    color: $color-mainbar-text-dark;
   }
 
   p {
-    max-width: 1500px;
+    max-width: 1400px;
     margin-top: 30px;
     padding: 0px 10px 0px 10px;
     font-size: 2em;
     font-family: $font-family-open-sans;
-    color: $color-sidebar-text;
-    text-align: justify;
+    color: $color-mainbar-text-light;
+    text-align: center;
   }
 }
 
