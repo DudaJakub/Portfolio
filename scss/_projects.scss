@@ -20,6 +20,7 @@
   }
 
   &__grid {
+    width: 100%;
     @media (min-width: 750px) {
       width: 100%;
       max-width: 1400px;
@@ -40,8 +41,9 @@
   }
 
   &__image {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     width: 100%;
+    max-width: 445px;
     height: 250px;
     background-image: url("../images/unavailable.jpg");
     background-position: center;
