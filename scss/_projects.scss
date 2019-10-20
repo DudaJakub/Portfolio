@@ -91,17 +91,14 @@
 
   &__tag {
     margin-top: 5px;
-    border: 1px solid $color-sidebar-background;
-    background-color: $color-mainbar-background-dark;
-    border-radius: 10px;
-    padding: 0px 8px 0px 8px;
+
     font-family: $font-family-open-sans;
     font-size: 1.6em;
     font-weight: bold;
     color: $color-mainbar-text-light;
 
     &:not(:first-of-type) {
-      margin-left: 5px;
+      margin-left: 12px;
     }
   }
 }
